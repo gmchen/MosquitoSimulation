@@ -1,2 +1,0 @@
-package gregchen;
-public enum Gender {MALE, FEMALE}
