@@ -1,0 +1,32 @@
+package gregchen;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferStrategy;
+
+/**
+ * The main class. Instantiates and displays the main control panel
+ *  @author Greg
+ */
+public class Main
+{
+	public static void main(String[] args)
+	{
+		
+		Rectangle maxBounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
+		
+		JFrame mainFrame = new JFrame("Control Panel");
+		mainFrame.setSize(ControlPanel.PANEL_WIDTH + mainFrame.getInsets().left + mainFrame.getInsets().right,
+				ControlPanel.PANEL_HEIGHT + mainFrame.getInsets().top + mainFrame.getInsets().bottom);
+		mainFrame.add(new ControlPanel());
+		mainFrame.setResizable(false);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setLocation(10,  10);
+		mainFrame.setLocation(10, maxBounds.height / 2 - mainFrame.getHeight()/2);
+		mainFrame.setVisible(true);
+				
+	}
+	
+}

@@ -1,0 +1,5 @@
+Success!
+Days elapsed: 179.06666666665907
+Number of Mosquitoes: 0
+Release interval: 9.0
+Number of releases: 8
